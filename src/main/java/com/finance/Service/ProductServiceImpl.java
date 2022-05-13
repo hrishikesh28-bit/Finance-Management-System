@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.finance.Model.Product;
-//import com.finance.Model.ProductHistory;
+import com.finance.Model.ProductHistory;
 import com.finance.Repository.ProductRepository;
 
 

@@ -6,7 +6,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 import com.finance.Model.Product;
-//import com.finance.Model.ProductHistory;
+import com.finance.Model.ProductHistory;
 
 
 
