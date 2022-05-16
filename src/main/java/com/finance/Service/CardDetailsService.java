@@ -9,9 +9,7 @@ import com.finance.Model.CardDetails;
 public interface CardDetailsService {
 	public boolean updateBalance(long regid,int price);
 	public List<CardDetails> getProducts();
-	
-	
-	//SNEHA PART
+
 	public List<CardDetails> getCarddetails();
 	
 	
