@@ -18,7 +18,6 @@ public class CardDetailsServiceImpl implements CardDetailsService {
 
 	@Override
 	public boolean updateBalance(long regid,int price) {
-		// TODO Auto-generated method stub
 		
 		CardDetails card=cardRepo.findByRegid(regid);
 		if(price>card.getAvailbal()) {
@@ -34,16 +33,12 @@ public class CardDetailsServiceImpl implements CardDetailsService {
 
 	@Override
 	public List<CardDetails> getProducts() {
-		// TODO Auto-generated method stub
 		return cardRepo.findAll();
 	}
 	
 	
-	////SNEHAAAA PART
-	
 	@Override
 	public List<CardDetails> getCarddetails() {
-		// TODO Auto-generated method stub
 		return cardRepo.findAll();
 	}
 
@@ -58,13 +53,11 @@ public class CardDetailsServiceImpl implements CardDetailsService {
 
 	@Override
 	public CardDetails findCard(long regid) {
-		// TODO Auto-generated method stub
 		return cardRepo.findById(regid).get();
 	}
 
 	@Override
 	public boolean deleteCard(long regid) {
-		// TODO Auto-generated method stub
 		CardDetails newusr=cardRepo.findById(regid).get();
 		cardRepo.delete(newusr);
 		return true;
@@ -72,9 +65,6 @@ public class CardDetailsServiceImpl implements CardDetailsService {
 
 	@Override
 	public boolean addCard(CardDetails card) {
-//		
-		
-		
 		if(card.getCardtype().equals("gold")) {
 			Date d =Date.valueOf(LocalDate.now().plusYears(2));
 			card.setValidity(d);
@@ -82,12 +72,8 @@ public class CardDetailsServiceImpl implements CardDetailsService {
 		}
 		else {
 			Date d =Date.valueOf(LocalDate.now().plusYears(3));
-		card.setValidity(d);
-
-			
+		card.setValidity(d);	
 		}
-		
-		
 		cardRepo.save(card);
 		return true;
 		}
